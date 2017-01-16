@@ -72,8 +72,8 @@ jQuery(function($){
 			queryUrl+=tempScales[3];
 		}
 		if(wejson.weather[0].main=="Clear"){
-			var millis=(new Date()).getTime();
-			if(wejson.sys.sunrise<millis && millis<wejson.sys.sunset){
+			var millis=Math.floor((new Date()).getTime()/1000);
+			if(wejson.sys.sunrise>millis || millis>wejson.sys.sunset){
 				queryUrl+=",Night";
 			}
 		}else{
@@ -101,8 +101,10 @@ jQuery(function($){
 		}else if(condition=='Clouds'){
 			icon+=icons[3];
 		}else{
-			var millis=(new Date()).getTime();
-			if(millis>sys.sunset && millis<sys.sunrise){
+			var millis=Math.floor((new Date()).getTime()/1000);
+			console.log(millis);
+			console.log(sys.sunset+" "+sys.sunrise);
+			if(millis>sys.sunset || millis<sys.sunrise){
 				icon+=icons[1];
 			}else{
 				icon+=icons[0];
