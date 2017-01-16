@@ -1,0 +1,36 @@
+body{
+	background-color: #252525;
+	color: white;
+}
+
+.make_vis{
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.fa-star-o{
+	font-size: 0.5em !important;
+}
+
+.site_title{
+	font-family: 'Josefin Slab',serif;
+}
+
+.city_details{
+	font-family: 'Dancing Script', cursive;
+	font-size: 2.5em;
+	margin-top: 30px;
+}
+
+.temp_details{
+	font-family: 'Lobster Two', cursive;
+	font-size: 3.5em;
+	margin-top: 40px;
+}
+
+.rest_details{
+	font-family: 'Amatic SC',cursive;
+	font-size: 2em;
+	margin-top: 20px;
+}
